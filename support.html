@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — Neon Labyrinth for Roku</title>
+<meta name="description" content="Setup, settings, troubleshooting, and release notes for the Neon Labyrinth Roku screensaver, plus a real email address.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2302040b'/%3E%3Cpath d='M8 24V8h16v10h-6' fill='none' stroke='%2317e8ff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='18' r='2.2' fill='%23ffe66d'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="./">NEON <b>LABYRINTH</b></a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="support.html" aria-current="page">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a class="nav-cta" href="https://channelstore.roku.com/details/39aa4c5de37344ee05259c62be5ec49a:de59420438a7e2c38c61f63bbaf37e4d" rel="noopener">Get it on Roku</a>
+  </nav>
+</header>
+
+<main class="prose">
+  <h1>Support</h1>
+  <p class="dateline">Setup · settings · troubleshooting · release notes</p>
+
+  <h2>Setting Neon Labyrinth as your screensaver</h2>
+  <ol class="steps">
+    <li><span>Install <b>Neon Labyrinth</b> from the <a href="https://channelstore.roku.com/details/39aa4c5de37344ee05259c62be5ec49a:de59420438a7e2c38c61f63bbaf37e4d" rel="noopener">Roku Channel Store</a>.</span></li>
+    <li><span>On your Roku, open <b>Settings → Theme → Screensavers</b>.</span></li>
+    <li><span>Select <b>Neon Labyrinth</b> from the list.</span></li>
+    <li><span>Optionally adjust <b>Settings → Theme → Screensavers → Change wait time</b> to control how quickly it starts when the device goes idle.</span></li>
+  </ol>
+  <p>The screensaver starts automatically when your Roku sits idle. Pressing <strong>any button</strong> on the remote ends it immediately and returns you to whatever you were doing.</p>
+
+  <h2>Screensaver settings</h2>
+  <p>From the same screen, choose <strong>Change screensaver settings</strong> to adjust:</p>
+  <figure class="shot">
+    <img src="img/settings-screen-1280.webp" srcset="img/settings-screen-640.webp 640w, img/settings-screen-1280.webp 1280w" sizes="(max-width: 700px) 100vw, 640px" width="1280" height="720" alt="The Neon Labyrinth settings screen on a Roku: Color palette, five Maze shapes checkboxes (Rectangle, Hexagon, Triangle, Oval, Upsilon), Maze complexity, Solver speed, Show maze construction, Reduced motion, and Reset to defaults." loading="lazy">
+    <figcaption>The settings screen. Up/Down selects a row, Left/Right changes a value, OK toggles a checkbox, Back exits.</figcaption>
+  </figure>
+  <ul>
+    <li><strong>Color palette</strong> — five fixed neon palettes, or Auto, which invents a fresh scheme every maze.</li>
+    <li><strong>Maze shapes</strong> — five checkboxes: Rectangle, Hexagon, Triangle, Oval, and Upsilon (an octagon-and-square grid). Every cycle picks at random from the checked shapes. All five start checked; the last checked shape can't be turned off, so there is always something to draw.</li>
+    <li><strong>Maze complexity</strong> — Relaxed, Standard, or Intricate. Each level has about the same number of cells on every shape, so a Standard hexagon maze takes about as long as a Standard rectangle.</li>
+    <li><strong>Solver speed</strong> — Slow, Standard, or Fast exploration.</li>
+    <li><strong>Show maze construction</strong> — watch walls draw themselves, or have each maze fade in complete.</li>
+    <li><strong>Reduced motion</strong> — a calmer presentation with gentler pulses and no rapid flashes.</li>
+    <li><strong>Reset to defaults</strong> — puts every setting back where it started: Auto palette, all five shapes, Standard complexity and speed, construction on, reduced motion off.</li>
+  </ul>
+
+  <h2>Troubleshooting</h2>
+  <ul>
+    <li><strong>The screensaver never starts.</strong> Confirm Neon Labyrinth is selected under Settings → Theme → Screensavers, and check the wait time setting — the device must sit idle that long with no remote input.</li>
+    <li><strong>It won't start, or the screen goes black when it does.</strong> Restart your Roku: Settings → System → Power → System restart (or unplug it for ten seconds and plug it back in). Roku keeps the screensaver loaded between runs, and a restart clears whatever state it was left in. If it still misbehaves after a restart, email us with your Roku model and software version.</li>
+    <li><strong>I only ever see one shape</strong> (or I never see a particular one). Open Change screensaver settings and look at the Maze shapes checkboxes — only checked shapes are in the rotation. Random means random: with all five on, the same shape can still come up a few cycles in a row.</li>
+    <li><strong>A checkbox won't turn off.</strong> That's the last shape still checked. Check another shape first, then uncheck the one you don't want.</li>
+    <li><strong>My settings look wrong or reset themselves.</strong> The screensaver validates its stored settings every launch; if a value is ever unreadable it restores safe defaults rather than failing to start. Re-pick your preferences and they will persist.</li>
+    <li><strong>It exited on its own.</strong> Any remote press — including from a phone remote app or a paired voice remote — ends the screensaver by design.</li>
+    <li><strong>Anything else.</strong> Email us. Include your Roku model and software version (Settings → System → About) if you can — it helps a lot.</li>
+  </ul>
+
+  <h2>Release notes</h2>
+  <ol class="releases">
+    <li>
+      <span class="ver">2.0.0 <small>September 2026</small></span>
+      <span>Five maze shapes: rectangle, hexagon, triangle, oval, and upsilon (octagon + square). Pick which shapes rotate with new checkboxes in settings — all five are on by default. Triangle mazes solve at a brisker pace. Everything else you know is unchanged.</span>
+    </li>
+    <li>
+      <span class="ver">1.0 <small>August 2026</small></span>
+      <span>First release. Rectangle mazes, five palettes plus Auto, three complexities, three solver speeds, optional construction phase, reduced motion.</span>
+    </li>
+  </ol>
+
+  <div class="contact-card">
+    <span class="eyebrow">Email support</span>
+    <a href="mailto:neonlabyrinth@ogdb.com">neonlabyrinth@ogdb.com</a>
+    <p>We read everything and typically reply within a few days.</p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <span><a href="mailto:neonlabyrinth@ogdb.com">neonlabyrinth@ogdb.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  <span class="fine">© 2026 Neon Labyrinth. Roku is a trademark of Roku, Inc. This product is not affiliated with or endorsed by Roku, Inc.</span>
+</footer>
+
+</body>
+</html>

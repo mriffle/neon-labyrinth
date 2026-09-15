@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Labyrinth — a neon maze screensaver for Roku</title>
+<meta name="description" content="Endless neon mazes in five shapes build themselves, hunt down dead ends, and light up the solution — different every time. A screensaver for Roku devices.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mriffle.github.io/neon-labyrinth/">
+<meta property="og:title" content="Neon Labyrinth — a neon maze screensaver for Roku">
+<meta property="og:description" content="A screensaver for Roku TVs and players. Endless neon mazes in five shapes build themselves, hunt down dead ends, and light up the solution — different every time.">
+<meta property="og:image" content="https://mriffle.github.io/neon-labyrinth/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2302040b'/%3E%3Cpath d='M8 24V8h16v10h-6' fill='none' stroke='%2317e8ff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='18' r='2.2' fill='%23ffe66d'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Neon Labyrinth",
+  "applicationCategory": "EntertainmentApplication",
+  "applicationSubCategory": "Screensaver",
+  "operatingSystem": "Roku OS",
+  "url": "https://mriffle.github.io/neon-labyrinth/",
+  "image": "https://mriffle.github.io/neon-labyrinth/img/og.jpg",
+  "description": "A neon maze screensaver for Roku TVs and players. Endless mazes in five shapes build themselves, hunt down dead ends, and light up the solution — different every time.",
+  "offers": { "@type": "Offer", "price": "1.99", "priceCurrency": "USD", "url": "https://channelstore.roku.com/details/39aa4c5de37344ee05259c62be5ec49a:de59420438a7e2c38c61f63bbaf37e4d" }
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="./">NEON <b>LABYRINTH</b></a>
+  <nav class="site-nav" aria-label="Site">
+    <a href="support.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a class="nav-cta" href="https://channelstore.roku.com/details/39aa4c5de37344ee05259c62be5ec49a:de59420438a7e2c38c61f63bbaf37e4d" rel="noopener">Get it on Roku</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" aria-labelledby="hero-h">
+    <div class="hero-copy">
+      <p class="eyebrow">A screensaver for Roku TVs and players</p>
+      <h1 id="hero-h" class="hero-title">Watch the maze think.</h1>
+      <p class="hero-sub">Endless neon mazes in five shapes build themselves, hunt down dead ends, and light up the solution — different every time. It takes over whenever your Roku goes idle, and any button on the remote brings you back.</p>
+      <div class="hero-meta">
+        <a class="btn-store" href="https://channelstore.roku.com/details/39aa4c5de37344ee05259c62be5ec49a:de59420438a7e2c38c61f63bbaf37e4d" rel="noopener">Get it on the Roku Channel Store <span class="price">$1.99 · pay once</span></a>
+      </div>
+    </div>
+    <figure class="tv">
+      <div class="tv-screen">
+        <canvas id="maze-canvas" aria-label="A maze in one of the five cell shapes being built and solved the way the screensaver draws it: neon walls, a comet-headed solver, dashed dead-end scars, and a lit solution. Click for the next shape."></canvas>
+      </div>
+      <figcaption>
+        <span class="seed-readout" id="seed-readout">seed 54628385 · <span class="pal">Auto palette</span></span>
+        <span class="tv-note">live demo · a random shape each cycle · click the screen for the next shape</span>
+      </figcaption>
+    </figure>
+    <ol class="setup-strip" aria-label="How to turn it on">
+      <li><span><b>Install it</b> from the Roku Channel Store on your Roku or on the web.</span></li>
+      <li><span>On your Roku, open <b>Settings → Theme → Screensavers</b>.</span></li>
+      <li><span><b>Pick Neon Labyrinth.</b> It starts on its own when the screen goes idle.</span></li>
+    </ol>
+  </section>
+
+  <section class="section" aria-labelledby="shapes-h">
+    <div class="section-head">
+      <p class="eyebrow">Five maze shapes</p>
+      <h2 id="shapes-h">Not just squares anymore.</h2>
+      <p>Every cycle picks a shape at random — or check only the ones you want in the rotation. Each shape is a genuinely different maze: its own cell geometry, its own corridors, its own way of getting lost.</p>
+    </div>
+    <div class="shape-grid">
+      <div class="shape lead">
+        <figure>
+          <img src="img/hexagon-active-solve-1280.webp" srcset="img/hexagon-active-solve-640.webp 640w, img/hexagon-active-solve-1280.webp 1280w" sizes="(max-width: 1060px) 100vw, 1000px" width="1280" height="720" alt="A hexagon maze mid-solve: an amber trail winds through blue honeycomb walls, dashed green scars mark abandoned dead ends, and the goal ring glows near the top right." loading="eager">
+          <figcaption>
+            <span class="name">Hexagon</span>
+            <span class="blurb">Six ways out of every cell. Corridors bend at 60°, so a wrong turn can wander a long way before it dies.</span>
+            <span class="spec">pointy-top honeycomb · captured on a Roku Ultra</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="shape">
+        <figure>
+          <img src="img/oval-active-solve-1280.webp" srcset="img/oval-active-solve-640.webp 640w, img/oval-active-solve-1280.webp 1280w" sizes="(max-width: 640px) 100vw, 500px" width="1280" height="720" alt="An oval ring maze mid-solve: concentric rings of pale blue walls around a central hub, with an amber trail threading the upper-left rings." loading="lazy">
+          <figcaption>
+            <span class="name">Oval</span>
+            <span class="blurb">Rings around a hub. Corridors curve, cells fan out toward the rim, and the solver has to earn its way inward and back.</span>
+            <span class="spec">concentric rings · curved corridors</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="shape">
+        <figure>
+          <img src="img/triangle-active-solve-1280.webp" srcset="img/triangle-active-solve-640.webp 640w, img/triangle-active-solve-1280.webp 1280w" sizes="(max-width: 640px) 100vw, 500px" width="1280" height="720" alt="A triangle maze mid-solve in green walls with a violet explored route, the comet head near the goal ring on the left." loading="lazy">
+          <figcaption>
+            <span class="name">Triangle</span>
+            <span class="blurb">Three exits per cell and a zigzag grain. The brisk one — triangle mazes solve at a faster clip so the cycle stays under two minutes.</span>
+            <span class="spec">alternating up / down cells · chord trails</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="shape">
+        <figure>
+          <img src="img/upsilon-active-solve-1280.webp" srcset="img/upsilon-active-solve-640.webp 640w, img/upsilon-active-solve-1280.webp 1280w" sizes="(max-width: 640px) 100vw, 500px" width="1280" height="720" alt="An upsilon maze mid-solve: an octagon-and-square checkerboard of green walls with a violet explored route and red dashed scars filling the right half." loading="lazy">
+          <figcaption>
+            <span class="name">Upsilon</span>
+            <span class="blurb">Octagons and squares in a checkerboard. Octagons have eight neighbors, squares four, so the corridors run straight, diagonal, and everything between.</span>
+            <span class="spec">octagon + square tiling · up to 8 exits</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="shape">
+        <figure>
+          <img src="img/rectangle-active-solve-1280.webp" srcset="img/rectangle-active-solve-640.webp 640w, img/rectangle-active-solve-1280.webp 1280w" sizes="(max-width: 640px) 100vw, 500px" width="1280" height="720" alt="A rectangle maze mid-solve in cyan walls with a rose explored route and gold dashed scars, the comet head near the center." loading="lazy">
+          <figcaption>
+            <span class="name">Rectangle</span>
+            <span class="blurb">The classic grid, exactly as the 1.0 screensaver drew it. Still in the rotation, and still the sharpest of the five.</span>
+            <span class="spec">the original · pixel-for-pixel unchanged</span>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <p class="shape-note"><b>All five are on by default.</b> Under Screensaver settings on your Roku, each shape is a checkbox — uncheck the ones you'd rather not see. At least one always stays on.</p>
+  </section>
+
+  <section class="section" aria-labelledby="cycle-h">
+    <div class="section-head">
+      <p class="eyebrow">One cycle, under two minutes</p>
+      <h2 id="cycle-h">Built. Solved. Celebrated. Repeat.</h2>
+    </div>
+    <div class="cycle-grid">
+      <div class="cycle-step" data-phase="build">
+        <span class="num">PHASE 01</span>
+        <h3>Construction</h3>
+        <p>Walls draw themselves across the dark and energize with a soft neon glow. Prefer stillness? Turn construction off and each maze fades in complete.</p>
+      </div>
+      <div class="cycle-step" data-phase="solve">
+        <span class="num">PHASE 02</span>
+        <h3>The solve</h3>
+        <p>A comet-headed beam leaves the warp ring and hunts for the far gate — honestly. Wrong turns burn down into ember scars, and the whole explored route stays lit, brightest near the head.</p>
+      </div>
+      <div class="cycle-step" data-phase="celebrate">
+        <span class="num">PHASE 03</span>
+        <h3>Celebration</h3>
+        <p>The route home ignites, holds a moment, and fades to black. Then a fresh seed, a fresh shape, a fresh palette. No two cycles repeat.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="feat-h">
+    <div class="section-head">
+      <p class="eyebrow">What you get</p>
+      <h2 id="feat-h">A screensaver with something at stake</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>Five maze shapes</h3>
+        <p>Rectangle, hexagon, triangle, oval, and upsilon — random per cycle, or check just the ones you like.</p>
+        <p class="spec">five geometries · one solver</p>
+      </div>
+      <div class="feature">
+        <h3>Endless procedural mazes</h3>
+        <p>Every cycle generates a new maze on your device and proves it solvable before a single wall glows.</p>
+        <p class="spec">three complexities · ~530 / ~990 / ~1,650 cells, on every shape</p>
+      </div>
+      <div class="feature">
+        <h3>A solver that earns it</h3>
+        <p>No shortcuts and no script — the beam explores like you would, hits real dead ends, and backtracks in plain sight.</p>
+        <p class="spec">depth-first search · every failure stays visible</p>
+      </div>
+      <div class="feature">
+        <h3>Five palettes, plus Auto</h3>
+        <p>Electric Cyan, Ultraviolet, Magenta Circuit, Emerald Pulse, Solar Neon — or let Auto invent a brand-new neon scheme every cycle.</p>
+        <p class="spec">auto mode · generative, never repeats itself</p>
+      </div>
+      <div class="feature">
+        <h3>Your pace</h3>
+        <p>Set maze complexity and solver speed to taste, skip the construction phase if you prefer stillness, or switch on reduced motion for gentler pulses and no rapid flashes.</p>
+        <p class="spec">full cycles stay under two minutes</p>
+      </div>
+      <div class="feature">
+        <h3>Offline and private</h3>
+        <p>No account, no ads, no analytics, nothing transmitted. Settings live on your Roku and nowhere else.</p>
+        <p class="spec"><a href="privacy.html">read the whole privacy policy</a> · it's six sentences</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="faq-h">
+    <div class="section-head">
+      <p class="eyebrow">Quick answers</p>
+      <h2 id="faq-h">Before you ask</h2>
+    </div>
+    <div class="faq-list">
+      <div>
+        <h3>How do I turn it on?</h3>
+        <p>After installing: Settings → Theme → Screensavers → Neon Labyrinth. It starts on its own when your Roku goes idle, and any button on the remote ends it instantly.</p>
+      </div>
+      <div>
+        <h3>Is it a channel or a screensaver?</h3>
+        <p>A screensaver. It doesn't add a tile to your channel row and there is nothing to launch — once installed, choose it under Settings → Theme → Screensavers and it runs whenever your Roku sits idle. It works on Roku TVs and on streaming players and sticks alike.</p>
+      </div>
+      <div>
+        <h3>Can I pick which shapes appear?</h3>
+        <p>Yes. Settings → Theme → Screensavers → Neon Labyrinth → Change screensaver settings. Under Maze shapes, each shape is a checkbox; all five start checked. Leave one on and you'll only ever see that shape.</p>
+      </div>
+      <div>
+        <h3>Does it collect anything?</h3>
+        <p>No. No account, no tracking, no ads, no network use at all. See the <a href="privacy.html">privacy policy</a>.</p>
+      </div>
+      <div>
+        <h3>What does it cost?</h3>
+        <p>$1.99, once, through the <a href="https://channelstore.roku.com/details/39aa4c5de37344ee05259c62be5ec49a:de59420438a7e2c38c61f63bbaf37e4d" rel="noopener">Roku Channel Store</a>. No subscription, no in-app purchases — there is nothing in it to buy.</p>
+      </div>
+      <div>
+        <h3>Something's not right.</h3>
+        <p>Head to <a href="support.html">support</a> — setup steps, troubleshooting, and a real email address.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <span><a href="mailto:neonlabyrinth@ogdb.com">neonlabyrinth@ogdb.com</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></span>
+  <span class="fine">© 2026 Neon Labyrinth. Roku is a trademark of Roku, Inc. This product is not affiliated with or endorsed by Roku, Inc.</span>
+</footer>
+
+<script src="maze.js"></script>
+</body>
+</html>
